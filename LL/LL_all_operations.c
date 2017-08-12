@@ -1,6 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+struct node {
+    int data;
+    struct node* next;
+};
+
 struct node* head = NULL;
 void display(struct node*);
 void swap(struct node *a, struct node *b);
@@ -15,11 +20,6 @@ struct node* delete_node(struct node*);
 struct node* delete_after(struct node*);
 struct node* delete_ll(struct node*);
 struct node* sort_ll(struct node*);
-
-struct node {
-    int data;
-    struct node* next;
-};
 
 struct node* create_ll(struct node* head){
     struct node* new_node, *current;
